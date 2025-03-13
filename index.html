@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DREW - A Roby Company</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Verdana, Arial, sans-serif;
+          background: #CCCCCC url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAIfP378zwjjgzjKysqMYAEYB8RmROaABAD2Mw9fuRdIeAAAAABJRU5ErkJggg==') repeat;
+        }
+
+        /* Main Container */
+        .container {
+          width: 760px;
+          margin: 20px auto;
+          border: 1px solid #999999;
+          background-color: #FFFFFF;
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Top Bar with Logo */
+        .top-bar {
+          height: 100px;
+          background: linear-gradient(to bottom, #666666, #333333);
+          border-bottom: 1px solid #000000;
+          display: flex;
+          align-items: center;
+          padding: 0 20px;
+        }
+
+        /* Logo Container */
+        .logo {
+          display: inline-block;
+          margin-right: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+          height: 35px;
+          background: linear-gradient(to bottom, #614051, #4B3340);
+          border-top: 1px solid #999999;
+          border-bottom: 1px solid #000000;
+          display: flex;
+          align-items: center;
+        }
+
+        .nav-button {
+          display: inline-block;
+          height: 25px;
+          line-height: 25px;
+          padding: 0 15px;
+          margin-left: 10px;
+          background: linear-gradient(to bottom, #C3DD6D, #A1B758);
+          border: 1px solid #444444;
+          border-radius: 3px;
+          font-family: Verdana, sans-serif;
+          font-size: 11px;
+          font-weight: bold;
+          color: #333333;
+          text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+          text-decoration: none;
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+          background: linear-gradient(to bottom, #E0115F, #B00F4C);
+          color: #FFFFFF;
+          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content Area */
+        .content {
+          padding: 20px;
+          font-size: 12px;
+          line-height: 1.5;
+          color: #333333;
+        }
+
+        h1 {
+          color: #614051;
+          font-size: 18px;
+          margin-top: 0;
+          border-bottom: 1px dotted #999999;
+          padding-bottom: 5px;
+        }
+
+        /* Web 2.0 Badge */
+        .web-badge {
+          position: absolute;
+          top: 10px;
+          right: 50%;
+          transform: translateX(330px);
+          width: 80px;
+          height: 80px;
+          background: #E0115F;
+          border-radius: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 14px;
+          transform-origin: center;
+          animation: pulse 2s infinite;
+          border: 2px solid white;
+          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        @keyframes pulse {
+          0% { transform: translateX(330px) scale(1); }
+          50% { transform: translateX(330px) scale(1.1); }
+          100% { transform: translateX(330px) scale(1); }
+        }
+
+        /* Visitor Counter */
+        .counter {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 10px;
+          color: #666666;
+        }
+
+        .counter-box {
+          display: inline-block;
+          background-color: #000000;
+          color: #33FF00;
+          font-family: "Courier New", monospace;
+          padding: 2px 4px;
+          margin: 0 1px;
+          border: 1px solid #333333;
+        }
+    </style>
+</head>
+<body>
+<div class="web-badge">Web 2.0!</div>
+<div class="container">
+    <div class="top-bar">
+        <!-- DREW Logo -->
+        <div class="logo">
+            <svg width="240" height="75" viewBox="0 0 330 75">
+                <!-- Dark background for D and R (left side) - now Eggplant color -->
+                <path d="M0,-65 L170,-65 L145,10 L0,10 Z" fill="#614051" transform="translate(0, 65)" />
+
+                <!-- Light background for E and W (right side) - now Durian color -->
+                <path d="M170,-65 L330,-65 L330,10 L145,10 Z" fill="#C3DD6D" transform="translate(0, 65)" />
+
+                <!-- Letters centered on their respective sides with even spacing -->
+                <text font-family="Arial, sans-serif" font-weight="900" font-size="70" text-anchor="middle" transform="translate(0, 65)">
+                    <tspan x="40" fill="#C3DD6D">D</tspan>
+                    <tspan x="120" fill="#E0115F">R</tspan>
+                    <tspan x="200" fill="#614051">E</tspan>
+                    <tspan x="280" fill="#5E5449">W</tspan>
+                </text>
+            </svg>
+        </div>
+        <div style="color: #FFFFFF; font-size: 14px; font-weight: bold; text-shadow: 1px 1px 2px #000000;">
+            digital solutions since 2003
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="#" class="nav-button">HOME</a>
+        <a href="#" class="nav-button">ABOUT</a>
+        <a href="#" class="nav-button">SERVICES</a>
+        <a href="#" class="nav-button">PORTFOLIO</a>
+        <a href="#" class="nav-button">CONTACT</a>
+        <a href="#" class="nav-button">FORUM</a>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to DREW Digital Solutions</h1>
+        <p>
+            Our team of experts specializes in cutting-edge web design and development.
+            With the latest technologies like <b>DHTML</b>, <b>Flash</b>, and <b>JavaScript</b>,
+            we create dynamic websites that are both functional and visually stunning.
+        </p>
+        <p>
+            <img src="/api/placeholder/150/100" alt="placeholder" style="float: right; margin: 0 0 10px 10px; border: 1px solid #999; padding: 3px; background: #fff;" />
+            Founded in 2003, DREW has been at the forefront of web innovation. Our mission is to deliver
+            high-quality digital solutions that help our clients succeed online. Whether you need a simple brochure
+            website or a complex e-commerce platform, we have the skills and experience to bring your vision to life.
+        </p>
+        <p>
+            Please explore our website to learn more about our services and see examples of our work.
+            Don't hesitate to contact us if you have any questions or would like to discuss your project.
+        </p>
+    </div>
+
+    <div class="counter">
+        Visitors since March 2003:
+        <span class="counter-box">0</span>
+        <span class="counter-box">0</span>
+        <span class="counter-box">4</span>
+        <span class="counter-box">2</span>
+        <span class="counter-box">6</span>
+        <span class="counter-box">5</span>
+    </div>
+</div>
+</body>
+</html>
