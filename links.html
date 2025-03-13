@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DREW - My Favorite Links</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Arial, sans-serif;
+      background: #CCCCCC url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAIfP378zwjjgzjKysqMYAEYB8RmROaABAD2Mw9fuRdIeAAAAABJRU5ErkJggg==') repeat;
+    }
+
+    /* Main Container */
+    .container {
+      width: 760px;
+      margin: 20px auto;
+      border: 1px solid #999999;
+      background-color: #FFFFFF;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Top Bar with Logo */
+    .top-bar {
+      height: 100px;
+      background: linear-gradient(to bottom, #666666, #333333);
+      border-bottom: 1px solid #000000;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    /* Logo Container */
+    .logo {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    /* Navbar */
+    .navbar {
+      height: 35px;
+      background: linear-gradient(to bottom, #614051, #4B3340);
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #000000;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-button {
+      display: inline-block;
+      height: 25px;
+      line-height: 25px;
+      padding: 0 15px;
+      margin-left: 10px;
+      background: linear-gradient(to bottom, #C3DD6D, #A1B758);
+      border: 1px solid #444444;
+      border-radius: 3px;
+      font-family: Verdana, sans-serif;
+      font-size: 11px;
+      font-weight: bold;
+      color: #333333;
+      text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-button:hover {
+      background: linear-gradient(to bottom, #E0115F, #B00F4C);
+      color: #FFFFFF;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Content Area */
+    .content {
+      padding: 20px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #333333;
+    }
+
+    h1 {
+      color: #614051;
+      font-size: 18px;
+      margin-top: 0;
+      border-bottom: 1px dotted #999999;
+      padding-bottom: 5px;
+    }
+
+    h2 {
+      color: #E0115F;
+      font-size: 14px;
+      margin-top: 20px;
+      border-bottom: 1px dotted #CCCCCC;
+      padding-bottom: 3px;
+    }
+
+    /* Links categories */
+    .links-category {
+      margin-bottom: 25px;
+    }
+
+    .links-box {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .link-item {
+      width: 230px;
+      margin: 5px;
+      padding: 8px;
+      border: 1px solid #DDDDDD;
+      background: #F9F9F9;
+    }
+
+    .link-title {
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    .link-title a {
+      color: #614051;
+      text-decoration: none;
+    }
+
+    .link-title a:hover {
+      color: #E0115F;
+      text-decoration: underline;
+    }
+
+    .link-desc {
+      font-size: 10px;
+      color: #666666;
+    }
+
+    /* New tag */
+    .new-tag {
+      display: inline-block;
+      background: #E0115F;
+      color: white;
+      font-size: 8px;
+      padding: 1px 3px;
+      margin-left: 5px;
+      vertical-align: super;
+    }
+
+    /* View counter */
+    .hit-counter {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 10px;
+      color: #666666;
+    }
+
+    /* 88x31 Buttons */
+    .buttons-container {
+      text-align: center;
+      margin: 20px 0;
+      padding: 15px;
+      background: #F5F5F5;
+      border: 1px solid #DDDDDD;
+    }
+
+    .button-title {
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333333;
+    }
+
+    .button-collection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .button-88x31 {
+      margin: 3px;
+      border: 1px solid #CCCCCC;
+    }
+
+    /* Warning box */
+    .warning-box {
+      margin: 15px 0;
+      padding: 10px;
+      background: #FFEEEE;
+      border: 1px solid #FFCCCC;
+      font-size: 11px;
+      color: #CC0000;
+      text-align: center;
+    }
+
+    /* MySpace Mood */
+    .myspace-mood {
+      margin: 20px 0;
+      padding: 8px;
+      background: #F0F0F0;
+      border-top: 1px dashed #DDDDDD;
+      border-bottom: 1px dashed #DDDDDD;
+      font-size: 10px;
+      color: #666666;
+      text-align: center;
+    }
+
+    .mood-label {
+      font-weight: bold;
+      color: #E0115F;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 10px;
+      text-align: center;
+      font-size: 10px;
+      color: #999999;
+      border-top: 1px solid #EEEEEE;
+    }
+
+    /* Geocities-style animated GIF */
+    .animated-gif {
+      position: absolute;
+      animation: float 5s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .top-left {
+      top: 150px;
+      left: 50%;
+      margin-left: -430px;
+    }
+
+    .bottom-right {
+      bottom: 150px;
+      left: 50%;
+      margin-left: 380px;
+    }
+  </style>
+</head>
+<body>
+<img src="/api/placeholder/40/40" alt="Spinning Globe" class="animated-gif top-left" />
+<img src="/api/placeholder/40/40" alt="Flames Animation" class="animated-gif bottom-right" />
+
+<div class="container">
+  <div class="top-bar">
+    <!-- DREW Logo -->
+    <div class="logo">
+      <svg width="240" height="75" viewBox="0 0 330 75">
+        <!-- Dark background for D and R (left side) - Eggplant color -->
+        <path d="M0,-65 L170,-65 L145,10 L0,10 Z" fill="#614051" transform="translate(0, 65)" />
+
+        <!-- Light background for E and W (right side) - Durian color -->
+        <path d="M170,-65 L330,-65 L330,10 L145,10 Z" fill="#C3DD6D" transform="translate(0, 65)" />
+
+        <!-- Letters centered on their respective sides with even spacing -->
+        <text font-family="Arial, sans-serif" font-weight="900" font-size="70" text-anchor="middle" transform="translate(0, 65)">
+          <tspan x="40" fill="#C3DD6D">D</tspan>
+          <tspan x="120" fill="#E0115F">R</tspan>
+          <tspan x="200" fill="#614051">E</tspan>
+          <tspan x="280" fill="#5E5449">W</tspan>
+        </text>
+      </svg>
+    </div>
+    <div style="color: #FFFFFF; font-size: 14px; font-weight: bold; text-shadow: 1px 1px 2px #000000;">
+      my favorite links on the web
+    </div>
+  </div>
+
+  <div class="navbar">
+    <a href="index.html" class="nav-button">HOME</a>
+    <a href="about.html" class="nav-button">ABOUT</a>
+    <a href="links.html" class="nav-button">LINKS</a>
+    <a href="#" class="nav-button">PORTFOLIO</a>
+    <a href="#" class="nav-button">CONTACT</a>
+    <a href="#" class="nav-button">FORUM</a>
+  </div>
+
+  <div class="content">
+    <h1>My Favorite Links</h1>
+
+    <p>
+      Here are some of the coolest sites on the web that I visit regularly. Bookmark this page
+      to stay up-to-date with the best content the information superhighway has to offer!
+    </p>
+
+    <div class="warning-box">
+      DISCLAIMER: I am not responsible for any content on external sites. Some links may contain content
+      not suitable for viewing at work or school. Browse responsibly!
+    </div>
+
+    <h2>Humor Sites</h2>
+    <div class="links-category">
+      <div class="links-box">
+        <div class="link-item">
+          <div class="link-title"><a href="http://homestarrunner.com" target="_blank">Homestar Runner</a></div>
+          <div class="link-desc">Check out Strong Bad's emails for the best laughs on the internet! "The system is down, yo."</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://maddox.xmission.com" target="_blank">The Best Page in the Universe</a></div>
+          <div class="link-desc">Maddox tells it like it is with his hilarious rants about everything wrong with the world.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.realultimatepower.net" target="_blank">Real Ultimate Power</a><span class="new-tag">HOT!</span></div>
+          <div class="link-desc">All about ninjas, who are totally sweet. This site is awesome and anyone who says otherwise is stupid.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.somethingawful.com" target="_blank">Something Awful</a></div>
+          <div class="link-desc">The forums cost money to join, but it's worth every penny for the Photoshop Phriday and FYAD threads.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.albinoblacksheep.com" target="_blank">Albino Black Sheep</a></div>
+          <div class="link-desc">Flash animations and funny videos. Home of "All Your Base Are Belong To Us" and other classics.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.b3ta.com" target="_blank">B3ta</a><span class="new-tag">NEW</span></div>
+          <div class="link-desc">Weird and wonderful creations from British internet humorists. Check out their weekly newsletter!</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Tech News & Forums</h2>
+    <div class="links-category">
+      <div class="links-box">
+        <div class="link-item">
+          <div class="link-title"><a href="http://slashdot.org" target="_blank">Slashdot.org</a></div>
+          <div class="link-desc">News for nerds, stuff that matters. The best place to stay updated on tech news and developments.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.insecure.org" target="_blank">Insecure.org</a></div>
+          <div class="link-desc">Home of the nmap security scanner and lots of security tools. Essential for aspiring hackers.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.ubersite.com" target="_blank">Ubersite</a></div>
+          <div class="link-desc">Where I post as YellowDragon. Great community for weird humor and interesting discussions.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Gaming Sites</h2>
+    <div class="links-category">
+      <div class="links-box">
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.gameinformer.com" target="_blank">Game Informer</a></div>
+          <div class="link-desc">The best gaming magazine out there. Their reviews are always spot-on and worth reading.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.gamespy.com" target="_blank">GameSpy</a><span class="new-tag">UPDATED!</span></div>
+          <div class="link-desc">Amazing articles and game reviews. Their in-depth features are some of the best writing in gaming.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Search Engines & Social</h2>
+    <div class="links-category">
+      <div class="links-box">
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.altavista.com" target="_blank">AltaVista</a></div>
+          <div class="link-desc">The best search engine! Why use Google when AltaVista gives better results? My go-to for finding stuff online.</div>
+        </div>
+
+        <div class="link-item">
+          <div class="link-title"><a href="http://www.myspace.com" target="_blank">MySpace</a></div>
+          <div class="link-desc">Find me as OtisArleigh. Sorry if my page loads slowly - I have too many cool background GIFs!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="myspace-mood">
+      <span class="mood-label">Current Mood:</span> Nostalgic |
+      <span class="mood-label">Currently Listening To:</span> Linkin Park - In The End
+    </div>
+
+    <div class="buttons-container">
+      <div class="button-title">88x31 BUTTONS - FEEL FREE TO COPY THESE TO YOUR SITE!</div>
+      <div class="button-collection">
+        <img src="/api/placeholder/88/31" alt="Firefox Button" class="button-88x31" />
+        <img src="/api/placeholder/88/31" alt="Validated HTML" class="button-88x31" />
+        <img src="/api/placeholder/88/31" alt="Made with Notepad" class="button-88x31" />
+        <img src="/api/placeholder/88/31" alt="Get Firefox" class="button-88x31" />
+        <img src="/api/placeholder/88/31" alt="Linux User" class="button-88x31" />
+        <img src="/api/placeholder/88/31" alt="Anti-IE" class="button-88x31" />
+      </div>
+    </div>
+
+    <div class="hit-counter">
+      This page has been viewed
+      <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">3</span>
+      <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">2</span>
+      <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">7</span>
+      <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">4</span>
+      times since 03/01/2025
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2003-2025 DREW | This site looks best in Internet Explorer 6.0 or Netscape Navigator 7.0 at 800×600 resolution<br>
+    <a href="#" style="color: #666666;">Privacy Policy</a> | <a href="#" style="color: #666666;">Site Map</a> | <a href="#" style="color: #666666;">Contact Webmaster</a>
+  </div>
+</div>
+
+<center style="margin-top:10px; font-size:10px; color:#666666;">
+  <a href="#" style="color:#666666;">Link to me!</a> | <a href="#" style="color:#666666;">Report broken link</a> | <a href="#" style="color:#666666;">Submit a site</a><br>
+  Page generated in 0.042 seconds
+</center>
+
+<marquee scrollamount="2" style="color: #666666; font-size: 10px; margin-top: 5px;">Welcome to my links page! If you have any cool sites to suggest, email me at webmaster@geocities.com • • • Remember to sign my guestbook! • • • Updated weekly with fresh content!</marquee>
+</body>
+</html>

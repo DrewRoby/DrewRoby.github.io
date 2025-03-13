@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About DREW - My Journey</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Verdana, Arial, sans-serif;
+          background: #CCCCCC url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAIfP378zwjjgzjKysqMYAEYB8RmROaABAD2Mw9fuRdIeAAAAABJRU5ErkJggg==') repeat;
+        }
+
+        /* Main Container */
+        .container {
+          width: 760px;
+          margin: 20px auto;
+          border: 1px solid #999999;
+          background-color: #FFFFFF;
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Top Bar with Logo */
+        .top-bar {
+          height: 100px;
+          background: linear-gradient(to bottom, #666666, #333333);
+          border-bottom: 1px solid #000000;
+          display: flex;
+          align-items: center;
+          padding: 0 20px;
+        }
+
+        /* Logo Container */
+        .logo {
+          display: inline-block;
+          margin-right: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+          height: 35px;
+          background: linear-gradient(to bottom, #614051, #4B3340);
+          border-top: 1px solid #999999;
+          border-bottom: 1px solid #000000;
+          display: flex;
+          align-items: center;
+        }
+
+        .nav-button {
+          display: inline-block;
+          height: 25px;
+          line-height: 25px;
+          padding: 0 15px;
+          margin-left: 10px;
+          background: linear-gradient(to bottom, #C3DD6D, #A1B758);
+          border: 1px solid #444444;
+          border-radius: 3px;
+          font-family: Verdana, sans-serif;
+          font-size: 11px;
+          font-weight: bold;
+          color: #333333;
+          text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+          text-decoration: none;
+          box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:hover {
+          background: linear-gradient(to bottom, #E0115F, #B00F4C);
+          color: #FFFFFF;
+          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content Area */
+        .content {
+          padding: 20px;
+          font-size: 12px;
+          line-height: 1.5;
+          color: #333333;
+        }
+
+        h1 {
+          color: #614051;
+          font-size: 18px;
+          margin-top: 0;
+          border-bottom: 1px dotted #999999;
+          padding-bottom: 5px;
+        }
+
+        h2 {
+          color: #E0115F;
+          font-size: 14px;
+          margin-top: 15px;
+          border-bottom: 1px dotted #CCCCCC;
+          padding-bottom: 3px;
+        }
+
+        /* Timeline style */
+        .timeline-item {
+          margin-bottom: 15px;
+          position: relative;
+          padding-left: 70px;
+        }
+
+        .timeline-year {
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: #5E5449;
+          color: #FFFFFF;
+          padding: 2px 5px;
+          font-weight: bold;
+          font-size: 11px;
+          border-radius: 3px;
+          width: 50px;
+          text-align: center;
+        }
+
+        .timeline-content {
+          border-left: 3px solid #C3DD6D;
+          padding-left: 10px;
+        }
+
+        /* Skills Box */
+        .skills-box {
+          background: #F5F5F5;
+          border: 1px solid #DDDDDD;
+          padding: 10px;
+          margin: 15px 0;
+        }
+
+        .skill-category {
+          font-weight: bold;
+          color: #614051;
+          margin-bottom: 5px;
+        }
+
+        .skill-list {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+        }
+
+        .skill-item {
+          background: #E0115F;
+          color: white;
+          font-size: 10px;
+          padding: 2px 6px;
+          margin: 2px;
+          border-radius: 3px;
+        }
+
+        /* Quote box */
+        .quote-box {
+          margin: 20px 40px;
+          padding: 15px;
+          background: #FFFDE6;
+          border: 1px dashed #CCCCAA;
+          font-style: italic;
+          color: #666666;
+          text-align: center;
+        }
+
+        /* Guestbook Teaser */
+        .guestbook-teaser {
+          text-align: center;
+          margin-top: 20px;
+          padding: 10px;
+          background: #F0F0F0;
+          border-top: 1px solid #DDDDDD;
+          border-bottom: 1px solid #DDDDDD;
+        }
+
+        .sign-button {
+          display: inline-block;
+          padding: 3px 10px;
+          background: linear-gradient(to bottom, #614051, #4B3340);
+          color: white;
+          font-weight: bold;
+          font-size: 11px;
+          text-decoration: none;
+          border-radius: 3px;
+          border: 1px solid #333333;
+          margin-left: 10px;
+          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+          padding: 10px;
+          text-align: center;
+          font-size: 10px;
+          color: #999999;
+          border-top: 1px solid #EEEEEE;
+        }
+
+        /* Construction GIF */
+        .under-construction {
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-380px);
+        }
+    </style>
+</head>
+<body>
+<img src="/api/placeholder/100/60" alt="Under Construction" class="under-construction" style="border: none;" />
+
+<div class="container">
+    <div class="top-bar">
+        <!-- DREW Logo -->
+        <div class="logo">
+            <svg width="240" height="75" viewBox="0 0 330 75">
+                <!-- Dark background for D and R (left side) - Eggplant color -->
+                <path d="M0,-65 L170,-65 L145,10 L0,10 Z" fill="#614051" transform="translate(0, 65)" />
+
+                <!-- Light background for E and W (right side) - Durian color -->
+                <path d="M170,-65 L330,-65 L330,10 L145,10 Z" fill="#C3DD6D" transform="translate(0, 65)" />
+
+                <!-- Letters centered on their respective sides with even spacing -->
+                <text font-family="Arial, sans-serif" font-weight="900" font-size="70" text-anchor="middle" transform="translate(0, 65)">
+                    <tspan x="40" fill="#C3DD6D">D</tspan>
+                    <tspan x="120" fill="#E0115F">R</tspan>
+                    <tspan x="200" fill="#614051">E</tspan>
+                    <tspan x="280" fill="#5E5449">W</tspan>
+                </text>
+            </svg>
+        </div>
+        <div style="color: #FFFFFF; font-size: 14px; font-weight: bold; text-shadow: 1px 1px 2px #000000;">
+            about me - last updated 03/13/2025
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html" class="nav-button">HOME</a>
+        <a href="about.html" class="nav-button">ABOUT</a>
+        <a href="#" class="nav-button">SERVICES</a>
+        <a href="#" class="nav-button">PORTFOLIO</a>
+        <a href="#" class="nav-button">CONTACT</a>
+        <a href="#" class="nav-button">FORUM</a>
+    </div>
+
+    <div class="content">
+        <h1>About Me - My Journey</h1>
+
+        <p>
+            <img src="/api/placeholder/150/150" alt="Profile Photo" style="float: right; margin: 0 0 10px 15px; border: 1px solid #999; padding: 3px; background: #fff;" />
+            Welcome to my personal page! I've traveled a winding road to get where I am today, from nuclear submarines to economics,
+            from agriculture to technology. Here's the story of how a Navy nuclear operator eventually found his way to the world of business solutions.
+        </p>
+
+        <div class="quote-box">
+            "Life is what happens to you while you're busy making other plans." - John Lennon
+        </div>
+
+        <h2>My Journey: A Timeline</h2>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2004</div>
+            <div class="timeline-content">
+                <strong>Educational Beginnings</strong><br>
+                Graduated from Westminster Christian Academy in St. Louis, MO. Not yet knowing what career path to pursue,
+                I made a bold decision that would shape the years to come.
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2004-10</div>
+            <div class="timeline-content">
+                <strong>Navy Nuclear Operator</strong><br>
+                Joined the United States Navy as a nuclear operator. Completed intensive training at Naval Nuclear Power Training Command (NNPTC)
+                in Goose Creek, SC, learning mechanics and nuclear power plant operations. After prototype training in Ballston Spa, NY,
+                I was assigned to the USS Houston (SSN-713), homeported in Guam, where I served for 4 years.
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2011</div>
+            <div class="timeline-content">
+                <strong>Academic Exploration</strong><br>
+                Returned to Missouri and enrolled at Truman State University, initially studying Computer Science.
+                Joined Alpha Gamma Rho fraternity and switched to Agricultural Science the following semester.
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">2012-?</div>
+            <div class="timeline-content">
+                <strong>Finding Direction</strong><br>
+                Left university to reassess my path. Worked delivering pizzas and at a coffee shop, where I met my future wife.
+                During this time, I developed a strong interest in economics through reading libertarian economists,
+                appreciating their scientific approach to understanding how the world works.
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-year">????</div>
+            <div class="timeline-content">
+                <strong>Career Launch</strong><br>
+                Completed my economics degree and embarked on my professional journey, which has included positions at:
+                <ul>
+                    <li>State Street (Kansas City, MO)</li>
+                    <li>Unyson Logistics (Maryland Heights, MO)</li>
+                    <li>Enterprise (Maryland Heights, MO)</li>
+                    <li>Spectrum (Champ, MO)</li>
+                    <li>Daugherty Business Solutions (Maryland Heights, MO)</li>
+                    <li>Currently at CGI (following their acquisition of Daugherty)</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Professional Skills</h2>
+
+        <div class="skills-box">
+            <div class="skill-category">Technical Skills:</div>
+            <div class="skill-list">
+                <div class="skill-item">Nuclear Operations</div>
+                <div class="skill-item">Mechanics</div>
+                <div class="skill-item">Computer Science</div>
+                <div class="skill-item">Business Solutions</div>
+                <div class="skill-item">Economic Analysis</div>
+            </div>
+
+            <div class="skill-category">Industries:</div>
+            <div class="skill-list">
+                <div class="skill-item">Military/Defense</div>
+                <div class="skill-item">Financial Services</div>
+                <div class="skill-item">Logistics</div>
+                <div class="skill-item">Telecommunications</div>
+                <div class="skill-item">Business Consulting</div>
+            </div>
+
+            <div class="skill-category">Soft Skills:</div>
+            <div class="skill-list">
+                <div class="skill-item">Adaptability</div>
+                <div class="skill-item">Problem Solving</div>
+                <div class="skill-item">Critical Thinking</div>
+                <div class="skill-item">Economic Reasoning</div>
+                <div class="skill-item">Perseverance</div>
+            </div>
+        </div>
+
+        <h2>Personal Philosophy</h2>
+        <p>
+            My varied background has given me a unique perspective on problem-solving and business challenges.
+            From the disciplined environment of nuclear submarines to the analytical world of economics,
+            I've learned to approach problems methodically while keeping an eye on the bigger picture.
+        </p>
+        <p>
+            I believe that economics offers valuable insights into how the world works, and I apply these
+            principles in both my professional and personal life. My journey may not have been linear,
+            but each experience has contributed to who I am today.
+        </p>
+
+        <div class="guestbook-teaser">
+            Have thoughts or questions about my journey? <a href="#" class="sign-button">Sign my Guestbook!</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2003-2025 DREW | This site looks best in Internet Explorer 6.0 or Netscape Navigator 7.0 at 800×600 resolution<br>
+        <a href="#" style="color: #666666;">Privacy Policy</a> | <a href="#" style="color: #666666;">Site Map</a> | <a href="#" style="color: #666666;">Contact Webmaster</a>
+    </div>
+</div>
+
+<marquee scrollamount="3" style="color: #666666; font-size: 10px; margin-top: 10px;">Thanks for visiting my page! Don't forget to add me to your Favorites! • • • Last updated: March 13, 2025 • • • Current server time: <script>document.write(new Date().toLocaleTimeString())</script></marquee>
+</body>
+</html>
