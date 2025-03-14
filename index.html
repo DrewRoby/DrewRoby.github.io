@@ -1,17 +1,9 @@
 <!DOCTYPE html>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    });
-</script>
 <html>
 <head>
     <title>DREW - A Roby Company</title>
     <link rel="stylesheet" href="style.css">
+    <script src="common.js"></script>
 </head>
 <body>
 <div id="header-placeholder"></div>
@@ -33,14 +25,6 @@
         </p>
     </div>/
 </div>
-    <div class="counter">
-        Visitors since March 2003:
-        <span class="counter-box">0</span>
-        <span class="counter-box">0</span>
-        <span class="counter-box">4</span>
-        <span class="counter-box">2</span>
-        <span class="counter-box">6</span>
-        <span class="counter-box">5</span>
-    </div>
+<div id="footer-placeholder"></div>
 </body>
 </html>

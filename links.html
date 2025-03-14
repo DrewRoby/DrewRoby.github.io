@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    fetch('../header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-      });
-  });
-</script>
 <html>
 <head>
   <title>DREW - My Favorite Links</title>
   <link rel="stylesheet" href="style.css">
+  <script src="common.js"></script>
 </head>
-<div id="header-placeholder"></div>
 <body>
+<div id="header-placeholder"></div>
 <div class="container">
   <img src="/api/placeholder/40/40" alt="Spinning Globe" class="animated-gif top-left" />
   <img src="/api/placeholder/40/40" alt="Flames Animation" class="animated-gif bottom-right" />
@@ -132,27 +124,8 @@
           <img src="/api/placeholder/88/31" alt="Anti-IE" class="button-88x31" />
         </div>
       </div>
-
-      <div class="hit-counter">
-        This page has been viewed
-        <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">3</span>
-        <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">2</span>
-        <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">7</span>
-        <span style="background:#000; color:#33FF00; font-family:monospace; padding:2px 4px; margin:0 3px;">4</span>
-        times since 03/01/2025
-      </div>
     </div>
-
-    <div class="footer">
-      © 2003-2025 DREW | This site looks best in Internet Explorer 6.0 or Netscape Navigator 7.0 at 800×600 resolution<br>
-      <a href="#" style="color: #666666;">Privacy Policy</a> | <a href="#" style="color: #666666;">Site Map</a> | <a href="#" style="color: #666666;">Contact Webmaster</a>
-    </div>
-  </div>
-
-  <center style="margin-top:10px; font-size:10px; color:#666666;">
-    <a href="#" style="color:#666666;">Link to me!</a> | <a href="#" style="color:#666666;">Report broken link</a> | <a href="#" style="color:#666666;">Submit a site</a><br>
-    Page generated in 0.042 seconds
-  </center>
-<marquee scrollamount="2" style="color: #666666; font-size: 10px; margin-top: 5px;">Welcome to my links page! If you have any cool sites to suggest, email me at webmaster@geocities.com • • • Remember to sign my guestbook! • • • Updated weekly with fresh content!</marquee>
+</div>
+<div id="footer-placeholder"></div>
 </body>
 </html>

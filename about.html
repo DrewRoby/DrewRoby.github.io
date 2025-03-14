@@ -1,20 +1,12 @@
 <!DOCTYPE html>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('../header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
-        });
-    });
-</script>
 <html>
 <head>
     <title>About DREW - My Journey</title>
     <link rel="stylesheet" href="style.css">
+    <script src="common.js"></script>
 </head>
-<div id="header-placeholder"></div>
 <body>
+<div id="header-placeholder"></div>
 <img src="/api/placeholder/100/60" alt="Under Construction" class="under-construction" style="border: none;" />
 
 <div class="container">
@@ -134,13 +126,7 @@
             Have thoughts or questions about my journey? <a href="#" class="sign-button">Sign my Guestbook!</a>
         </div>
     </div>
-
-    <div class="footer">
-        © 2003-2025 DREW | This site looks best in Internet Explorer 6.0 or Netscape Navigator 7.0 at 800×600 resolution<br>
-        <a href="#" style="color: #666666;">Privacy Policy</a> | <a href="#" style="color: #666666;">Site Map</a> | <a href="#" style="color: #666666;">Contact Webmaster</a>
-    </div>
 </div>
-
-<marquee scrollamount="3" style="color: #666666; font-size: 10px; margin-top: 10px;">Thanks for visiting my page! Don't forget to add me to your Favorites! • • • Last updated: March 13, 2025 • • • Current server time: <script>document.write(new Date().toLocaleTimeString())</script></marquee>
+<div id="footer-placeholder"></div>
 </body>
 </html>
