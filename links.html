@@ -1,5 +1,15 @@
 <!DOCTYPE html>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('../header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  });
+</script>
 <html>
+<div id="header-placeholder"></div>
 <head>
   <title>DREW - My Favorite Links</title>
   <style>
