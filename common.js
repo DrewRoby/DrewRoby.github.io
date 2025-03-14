@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
+
+        // After header is loaded, set random tagline
+        setTimeout(setRandomTagline, 100);
       })
       .catch(error => {
         console.error('Error loading header:', error);
@@ -24,3 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
+
+// Function to set a random tagline
+function setRandomTagline() {
+  const taglineElement = document.getElementById('tagline');
+  if (taglineElement && typeof taglines !== 'undefined') {
+    const randomIndex = Math.floor(Math.random() * taglines.length);
+    taglineElement.textContent = taglines[randomIndex];
+  }
+}
