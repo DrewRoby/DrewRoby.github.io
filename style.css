@@ -125,3 +125,174 @@
           margin: 0 1px;
           border: 1px solid #333333;
         }
+
+        /* Timeline style */
+        .timeline-item {
+          margin-bottom: 15px;
+          position: relative;
+          padding-left: 70px;
+        }
+
+        .timeline-year {
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: #5E5449;
+          color: #FFFFFF;
+          padding: 2px 5px;
+          font-weight: bold;
+          font-size: 11px;
+          border-radius: 3px;
+          width: 50px;
+          text-align: center;
+        }
+
+        .timeline-content {
+          border-left: 3px solid #C3DD6D;
+          padding-left: 10px;
+        }
+
+        /* Skills Box */
+        .skills-box {
+          background: #F5F5F5;
+          border: 1px solid #DDDDDD;
+          padding: 10px;
+          margin: 15px 0;
+        }
+
+        .skill-category {
+          font-weight: bold;
+          color: #614051;
+          margin-bottom: 5px;
+        }
+
+        .skill-list {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+        }
+
+        .skill-item {
+          background: #E0115F;
+          color: white;
+          font-size: 10px;
+          padding: 2px 6px;
+          margin: 2px;
+          border-radius: 3px;
+        }
+
+        /* Quote box */
+        .quote-box {
+          margin: 20px 40px;
+          padding: 15px;
+          background: #FFFDE6;
+          border: 1px dashed #CCCCAA;
+          font-style: italic;
+          color: #666666;
+          text-align: center;
+        }
+
+        /* Guestbook Teaser */
+        .guestbook-teaser {
+          text-align: center;
+          margin-top: 20px;
+          padding: 10px;
+          background: #F0F0F0;
+          border-top: 1px solid #DDDDDD;
+          border-bottom: 1px solid #DDDDDD;
+        }
+
+        .sign-button {
+          display: inline-block;
+          padding: 3px 10px;
+          background: linear-gradient(to bottom, #614051, #4B3340);
+          color: white;
+          font-weight: bold;
+          font-size: 11px;
+          text-decoration: none;
+          border-radius: 3px;
+          border: 1px solid #333333;
+          margin-left: 10px;
+          text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+          padding: 10px;
+          text-align: center;
+          font-size: 10px;
+          color: #999999;
+          border-top: 1px solid #EEEEEE;
+        }
+
+        /* Construction GIF */
+        .under-construction {
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-380px);
+        }
+
+    /* 88x31 Buttons */
+    .buttons-container {
+      text-align: center;
+      margin: 20px 0;
+      padding: 15px;
+      background: #F5F5F5;
+      border: 1px solid #DDDDDD;
+    }
+
+    .button-title {
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333333;
+    }
+
+    .button-collection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .button-88x31 {
+      margin: 3px;
+      border: 1px solid #CCCCCC;
+    }
+
+    /* Warning box */
+    .warning-box {
+      margin: 15px 0;
+      padding: 10px;
+      background: #FFEEEE;
+      border: 1px solid #FFCCCC;
+      font-size: 11px;
+      color: #CC0000;
+      text-align: center;
+    }
+
+    /* MySpace Mood */
+    .myspace-mood {
+      margin: 20px 0;
+      padding: 8px;
+      background: #F0F0F0;
+      border-top: 1px dashed #DDDDDD;
+      border-bottom: 1px dashed #DDDDDD;
+      font-size: 10px;
+      color: #666666;
+      text-align: center;
+    }
+
+    .mood-label {
+      font-weight: bold;
+      color: #E0115F;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 10px;
+      text-align: center;
+      font-size: 10px;
+      color: #999999;
+      border-top: 1px solid #EEEEEE;
+    }
