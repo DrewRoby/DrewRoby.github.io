@@ -20,5 +20,8 @@ const taglines = [
   "srs bsns",
   "one love",
   "duck tales! ah woo-ooh!",
-  "guitar riffs, flames, confetti, and thou"
+  "guitar riffs, flames, confetti, and thou",
+  "Kilroy was here",
+  "you seem awfully cavalier. a lot like your brother.",
+  "WHY DID YOU REDEEM",
 ];
