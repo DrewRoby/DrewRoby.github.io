@@ -44,11 +44,22 @@ function setRandomTagline() {
 function updateTime() {
   const timeElement = document.getElementById('current-time');
   if (timeElement) {
+    // Set the initial time
     timeElement.textContent = new Date().toLocaleTimeString();
 
-    // Update time every second
-    setInterval(function() {
+    // Calculate milliseconds until the next minute
+    const now = new Date();
+    const delay = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+
+    // Set timeout to update at the next minute boundary
+    setTimeout(function() {
+      // Update the time
       timeElement.textContent = new Date().toLocaleTimeString();
-    }, 1000);
+
+      // Then set interval to update every minute (60000 milliseconds)
+      setInterval(function() {
+        timeElement.textContent = new Date().toLocaleTimeString();
+      }, 60000);
+    }, delay);
   }
 }
