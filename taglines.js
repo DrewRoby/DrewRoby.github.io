@@ -34,5 +34,6 @@ const taglines = [
   "stompin' turts",
   "AYBABTU: the first, the finest",
   "'smy burfday",
-  "the lesser of two weevils"
+  "the lesser of two weevils",
+  "welcome to the aloha snackbar"
 ];
