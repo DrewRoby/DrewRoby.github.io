@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
+
+        // After footer is loaded, set current time and start updating it
+        setTimeout(updateTime, 100);
       })
       .catch(error => {
         console.error('Error loading footer:', error);
@@ -34,5 +37,18 @@ function setRandomTagline() {
   if (taglineElement && typeof taglines !== 'undefined') {
     const randomIndex = Math.floor(Math.random() * taglines.length);
     taglineElement.textContent = taglines[randomIndex];
+  }
+}
+
+// Function to update the current time
+function updateTime() {
+  const timeElement = document.getElementById('current-time');
+  if (timeElement) {
+    timeElement.textContent = new Date().toLocaleTimeString();
+
+    // Update time every second
+    setInterval(function() {
+      timeElement.textContent = new Date().toLocaleTimeString();
+    }, 1000);
   }
 }
