@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Load footer
   if (document.getElementById('footer-placeholder')) {
-    fetch('footer.html')
+    fetch('/components/footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer-placeholder').innerHTML = data;
