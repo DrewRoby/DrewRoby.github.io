@@ -1,0 +1,96 @@
+/* Header */
+.top-bar {
+  height: 100px;
+  background: linear-gradient(to bottom, #666666, #333333);
+  border-bottom: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Navigation */
+.navbar {
+  height: 35px;
+  background: linear-gradient(to bottom, var(--primary-dark), #4B3340);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid #000000;
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 15px;
+  margin-left: 10px;
+  background: linear-gradient(to bottom, var(--primary-light), #A1B758);
+  border: 1px solid #444444;
+  border-radius: 3px;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background: linear-gradient(to bottom, var(--accent), #B00F4C);
+  color: #FFFFFF;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+  color: #999999;
+  border-top: 1px solid #EEEEEE;
+}
+
+/* Visitor Counter */
+.counter {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10px;
+  color: #666666;
+}
+
+.counter-box {
+  display: inline-block;
+  background-color: #000000;
+  color: #33FF00;
+  font-family: "Courier New", monospace;
+  padding: 2px 4px;
+  margin: 0 1px;
+  border: 1px solid #333333;
+}
+
+/* UI Components */
+.quote-box {
+  margin: 20px 40px;
+  padding: 15px;
+  background: #FFFDE6;
+  border: 1px dashed #CCCCAA;
+  font-style: italic;
+  color: #666666;
+  text-align: center;
+}
+
+.warning-box {
+  margin: 15px 0;
+  padding: 10px;
+  background: #FFEEEE;
+  border: 1px solid #FFCCCC;
+  font-size: 11px;
+  color: #CC0000;
+  text-align: center;
+}

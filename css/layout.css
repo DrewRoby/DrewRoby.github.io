@@ -1,0 +1,11 @@
+.container {
+  width: 760px;
+  margin: 20px auto;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-bg);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  padding: 20px;
+}

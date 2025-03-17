@@ -1,0 +1,53 @@
+:root {
+  /* Color scheme variables */
+  --primary-dark: #614051;    /* Eggplant */
+  --primary-light: #C3DD6D;   /* Durian */
+  --accent: #E0115F;          /* Ruby */
+  --neutral-dark: #5E5449;    /* Wenge */
+  --light-bg: #FFFFFF;
+  --dark-bg: #333333;
+  --medium-bg: #CCCCCC;
+  --border-color: #999999;
+  --light-border: #DDDDDD;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Arial, sans-serif;
+  background: var(--medium-bg) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAIfP378zwjjgzjKysqMYAEYB8RmROaABAD2Mw9fuRdIeAAAAABJRU5ErkJggg==') repeat;
+  color: #333333;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, Arial, sans-serif;
+  margin-top: 0;
+}
+
+h1 {
+  color: var(--primary-dark);
+  font-size: 18px;
+  border-bottom: 1px dotted var(--border-color);
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 16px;
+  color: var(--primary-dark);
+}
+
+h3 {
+  font-size: 14px;
+}
+
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

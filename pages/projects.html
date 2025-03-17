@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>DREW - Projects</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_projects.css">
-    <script src="common.js"></script>
-    <script src="taglines.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <script src="/js/common.js"></script>
+    <script src="/js/taglines.js"></script>
 </head>
 <body>
 <div id="header-placeholder"></div>
@@ -16,6 +19,47 @@
         </div>
         <h1>Projects</h1>
         <p>Below you'll find a selection of my professional and personal projects. Each highlights my approach to solving problems and the technologies I've worked with.</p>
+
+        <!-- Current Highlights Section -->
+        <div class="highlights-section">
+            <h2 class="highlights-title" style="color: #E0115F; font-size: 16px; margin-top: 20px; border-bottom: 1px dotted #E0115F; padding-bottom: 5px;">
+                <img src="/api/placeholder/16/16" alt="Star" style="vertical-align: middle; margin-right: 5px;">
+                Current Highlights
+            </h2>
+            <p style="font-size: 12px; margin-top: 10px; font-style: italic;">Featured projects I'm particularly proud of or currently focused on.</p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin: 15px 0 30px 0;">
+                <!-- Highlight Item 1 -->
+                <div class="highlight-item">
+                    <div class="highlight-header">
+                        <h3 class="highlight-title">Project Alpha</h3>
+                        <span class="highlight-badge current">CURRENT</span>
+                    </div>
+                    <p class="highlight-desc">Developing a new analytics dashboard with real-time data visualization.</p>
+                    <a href="#project-alpha" class="highlight-link">→ View details</a>
+                </div>
+
+                <!-- Highlight Item 2 -->
+                <div class="highlight-item">
+                    <div class="highlight-header">
+                        <h3 class="highlight-title">Data Pipeline</h3>
+                        <span class="highlight-badge favorite">FAVORITE</span>
+                    </div>
+                    <p class="highlight-desc">ETL system that processes 2TB of data daily with 99.9% uptime.</p>
+                    <a href="#data-pipeline" class="highlight-link">→ View details</a>
+                </div>
+
+                <!-- Highlight Item 3 -->
+                <div class="highlight-item">
+                    <div class="highlight-header">
+                        <h3 class="highlight-title">ML Framework</h3>
+                        <span class="highlight-badge progress">IN-PROGRESS</span>
+                    </div>
+                    <p class="highlight-desc">Creating a reusable ML platform for various predictive analytics use cases.</p>
+                    <a href="#ml-framework" class="highlight-link">→ View details</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Projects Container - Add your projects here -->
         <div class="projects-container">
@@ -72,9 +116,12 @@
 
         </div>
 
-        <!-- Project Form - Optional for adding new projects directly from the page -->
+        <!-- Project Reference Boilerplate Section -->
         <div style="margin-top: 30px; border-top: 1px dotted #999; padding-top: 20px;">
             <h2 style="color: #614051; font-size: 16px;">Project Boilerplate Reference</h2>
+            <p style="font-size: 12px;">Copy and paste these templates to add new projects or highlights:</p>
+
+            <h3 style="color: #E0115F; font-size: 14px; margin-top: 15px;">Project Card Template:</h3>
             <pre style="background: #F5F5F5; padding: 10px; overflow: auto; font-size: 11px; line-height: 1.4;">
 &lt;div class="project-card"&gt;
     &lt;h2 class="project-title"&gt;Project Name&lt;/h2&gt;
@@ -96,6 +143,20 @@
         &lt;a href="#" class="project-link"&gt;Code&lt;/a&gt;
         &lt;a href="#" class="project-link"&gt;Details&lt;/a&gt;
     &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+
+            <h3 style="color: #E0115F; font-size: 14px; margin-top: 15px;">Highlight Item Template:</h3>
+            <pre style="background: #F5F5F5; padding: 10px; overflow: auto; font-size: 11px; line-height: 1.4;">
+&lt;div class="highlight-item"&gt;
+    &lt;div class="highlight-header"&gt;
+        &lt;h3 class="highlight-title"&gt;Project Name&lt;/h3&gt;
+        &lt;span class="highlight-badge current"&gt;CURRENT&lt;/span&gt;
+        &lt;!-- Use class="highlight-badge favorite" for favorites --&gt;
+        &lt;!-- Use class="highlight-badge progress" for in-progress --&gt;
+    &lt;/div&gt;
+    &lt;p class="highlight-desc"&gt;Short description of the project.&lt;/p&gt;
+    &lt;a href="#anchor-link" class="highlight-link"&gt;→ View details&lt;/a&gt;
 &lt;/div&gt;
             </pre>
         </div>

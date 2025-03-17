@@ -1,0 +1,89 @@
+/* Timeline (About page) */
+.timeline-item {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 70px;
+}
+
+.timeline-year {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--neutral-dark);
+  color: #FFFFFF;
+  padding: 2px 5px;
+  font-weight: bold;
+  font-size: 11px;
+  border-radius: 3px;
+  width: 50px;
+  text-align: center;
+}
+
+.timeline-content {
+  border-left: 3px solid var(--primary-light);
+  padding-left: 10px;
+}
+
+/* Skills (About page) */
+.skills-box {
+  background: #F5F5F5;
+  border: 1px solid var(--light-border);
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.skill-category {
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin-bottom: 5px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.skill-item {
+  background: var(--accent);
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  margin: 2px;
+  border-radius: 3px;
+}
+
+/* Links page */
+.links-category {
+  margin-bottom: 20px;
+}
+
+.links-box {
+  background: #F9F9F9;
+  border: 1px solid var(--light-border);
+  padding: 10px;
+}
+
+.link-item {
+  margin-bottom: 12px;
+}
+
+.link-title {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.link-desc {
+  font-size: 11px;
+  color: #666666;
+}
+
+.new-tag {
+  display: inline-block;
+  margin-left: 5px;
+  background: var(--accent);
+  color: white;
+  font-size: 9px;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
