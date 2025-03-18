@@ -11,10 +11,10 @@ const taglines = [
   "optimized for 56k modems",
   "these colors don't run (how do I remove eggplant stains?)",
   "[your ad here]",
-  "hah! gayyyyy!",
+//  "hah! gayyyyy!",
   "there is no way that you are from my loins",
   "serious inquiries only",
-  "certified Odoo partner",
+  "prospective Odoo partner",
   "srs bsns fr",
   "one love",
   "duck tales! ah woo-ooh!",
@@ -35,5 +35,5 @@ const taglines = [
   "AYBABTU: the first, the finest",
   "'smy burfday",
   "the lesser of two weevils",
-  "welcome to the aloha snackbar"
+  "welcome to the aloha snackbar",
 ];
