@@ -5,15 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadRandomImage() {
-  // Array of image filenames in the rsps directory
-  // You'll need to manually update this array when you add new images
+  // Array of image filenames in the rsps directory. TODO make this dynamic
   const images = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg',
-    'image4.png',
-    'image5.gif',
-    // Add more image filenames as needed
+  '67c109f654bbf.jpg',
+  'Gg4J-0mWcAAfvps.jpg',
+  'GghyTzyXsAANmOl.jpg',
+  'GhirIEvacAMSh3S.jpg',
+  'GiAoacIW0AARJav.jpg',
+  'Gj2DEJkXcAARGWf.jpg',
+  'Gj8SW7qWwAEIw41.jpg',
+  'GjixZ6LWQAAOyhl.jpg',
+  'GjlJkYMXEAA2xkO.jpg',
+  'GjybbX_XUAAoM32.png',
+  'GkIlMGYXEAElcyD.jpg',
+  'GlWA38DXcAA-mOY.jpg',
+  'GlhfM4n1gGaa7_.jpg',
+  'Screenshot_20250127_134740_YouTube.png',
   ];
   
   // Get random index from the images array
