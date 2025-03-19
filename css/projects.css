@@ -177,6 +177,20 @@
   background: #F0AD4E;
 }
 
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.highlight-badge.artsy {
+    background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 1400% 1400%;
+    animation: rainbow 15s ease infinite;
+}
+
+
+
 .highlight-desc {
   font-size: 11px;
   margin: 8px 0;
