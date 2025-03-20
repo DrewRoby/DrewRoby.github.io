@@ -183,7 +183,7 @@
     100% { background-position: 0% 50%; }
 }
 
-.highlight-badge.artsy {
+.highlight-badge.rainbow {
     background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
     background-size: 1400% 1400%;
     animation: rainbow 15s ease infinite;
