@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <pattern id="paisley" patternUnits="userSpaceOnUse" width="100" height="100">
+      <!-- Main paisley drop shape -->
+      <path d="M25,30 C40,5 70,20 60,40 C50,60 20,50 25,30 Z" fill="none" stroke="#CCCCCC" stroke-width="1"/>
+      
+      <!-- Inner paisley swirl -->
+      <path d="M30,35 C35,25 50,30 45,40 C40,50 25,45 30,35 Z" fill="none" stroke="#CCCCCC" stroke-width="0.75"/>
+      
+      <!-- Small decorative elements -->
+      <circle cx="35" cy="30" r="2" fill="none" stroke="#CCCCCC" stroke-width="0.5"/>
+      <circle cx="50" cy="35" r="1.5" fill="none" stroke="#CCCCCC" stroke-width="0.5"/>
+      
+      <!-- Second paisley shape -->
+      <path d="M75,70 C90,45 65,30 55,50 C45,70 65,85 75,70 Z" fill="none" stroke="#CCCCCC" stroke-width="1"/>
+      
+      <!-- Inner swirl for second paisley -->
+      <path d="M70,65 C75,55 65,50 60,60 C55,70 65,75 70,65 Z" fill="none" stroke="#CCCCCC" stroke-width="0.75"/>
+      
+      <!-- Small decorative elements for second paisley -->
+      <circle cx="65" cy="60" r="2" fill="none" stroke="#CCCCCC" stroke-width="0.5"/>
+      <circle cx="60" cy="65" r="1.5" fill="none" stroke="#CCCCCC" stroke-width="0.5"/>
+      
+      <!-- Connecting elements -->
+      <path d="M40,45 C45,50 50,45 55,50" fill="none" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <path d="M30,60 C40,65 50,60 60,65" fill="none" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Apply the pattern to a rectangle that fills the entire SVG viewBox -->
+  <rect width="100" height="100" fill="url(#paisley)"/>
+</svg>
