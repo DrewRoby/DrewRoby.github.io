@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hit It.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* ════════════════════════════
+       INPUT SCREEN
+    ════════════════════════════ */
+    #input-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    #text-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #444;
+      color: #fff;
+      padding: 10px 6px;
+      font-size: 1.5rem;
+      outline: none;
+      width: 340px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      caret-color: #fff;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+    #text-input:focus        { border-bottom-color: #888; }
+    #text-input::placeholder { color: #2a2a2a; font-style: italic; }
+
+    #hit-btn {
+      background: transparent;
+      color: #666;
+      border: 1px solid #2a2a2a;
+      padding: 9px 32px;
+      font-size: 0.8rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    #hit-btn:hover { color: #ddd; border-color: #666; }
+
+    /* ── Controller panel ── */
+    #controller {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 13px;
+      margin-top: 6px;
+      padding-top: 18px;
+      border-top: 1px solid #181818;
+      width: 340px;
+    }
+
+    .ctrl-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .ctrl-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #383838;
+    }
+
+    .dir-toggle {
+      display: flex;
+      border: 1px solid #202020;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .dir-btn {
+      background: transparent;
+      color: #444;
+      border: none;
+      padding: 5px 15px;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.15s, color 0.15s;
+    }
+    .dir-btn + .dir-btn         { border-left: 1px solid #202020; }
+    .dir-btn.active             { background: #1c1c1c; color: #ccc; }
+    .dir-btn:hover:not(.active) { color: #888; }
+
+    .stepper {
+      display: flex;
+      align-items: center;
+      border: 1px solid #202020;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .step-btn {
+      background: transparent;
+      color: #555;
+      border: none;
+      padding: 4px 13px;
+      font-size: 1.05rem;
+      line-height: 1;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color 0.15s;
+      user-select: none;
+    }
+    .step-btn:hover:not(:disabled) { color: #ccc; }
+    .step-btn:disabled { color: #222; cursor: default; }
+    #waves-val {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      color: #aaa;
+      min-width: 26px;
+      text-align: center;
+      border-left: 1px solid #202020;
+      border-right: 1px solid #202020;
+      padding: 5px 4px;
+    }
+
+    /* ════════════════════════════
+       MARQUEE SCREEN
+    ════════════════════════════ */
+    #marquee-screen {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 80px;
+    }
+
+    #marquee-wrapper {
+      position: relative;
+      display: inline-block;
+      animation: fadein 0.45s ease both;
+    }
+
+    #phrase-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.8rem, 7vw, 6.5rem);
+      font-weight: 900;
+      color: #fff;
+      padding: 56px 80px;
+      display: block;
+      line-height: 1.15;
+      text-align: center;
+      max-width: 88vw;
+      word-break: break-word;
+    }
+
+    /* ── Corner buttons ── */
+    #corner-btns {
+      position: fixed;
+      bottom: 20px;
+      right: 24px;
+      display: none;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .corner-btn {
+      background: transparent;
+      color: #252525;
+      border: none;
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Playfair Display', Georgia, serif;
+      padding: 4px 2px;
+      transition: color 0.2s;
+    }
+    .corner-btn:hover { color: #777; }
+    #share-btn.copied { color: #6a5c28 !important; }
+
+    /* ── Bulb ── */
+    .bulb {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: #2e0600;
+      box-shadow: 0 0 2px 1px #2e0600;
+      animation: march 2s infinite ease-in-out;
+    }
+
+    @keyframes march {
+      0%   { background: #2e0600; box-shadow: 0 0 2px 1px #2e0600; }
+      7%   {
+        background: #fff7cc;
+        box-shadow: 0 0 5px 2px #ffe566, 0 0 12px 4px #ffaa00, 0 0 22px 6px #ff6600;
+      }
+      18%  { background: #ff4400; box-shadow: 0 0 6px 2px #cc2200, 0 0 10px 3px #660000; }
+      50%  { background: #5a0c00; box-shadow: 0 0 3px 1px #5a0c00; }
+      100% { background: #2e0600; box-shadow: 0 0 2px 1px #2e0600; }
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; transform: scale(0.96); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="input-screen">
+    <input id="text-input" type="text" placeholder="your phrase here…"
+           autocomplete="off" spellcheck="false" />
+    <button id="hit-btn">Hit it.</button>
+    <div id="controller">
+      <div class="ctrl-row">
+        <span class="ctrl-label">Direction</span>
+        <div class="dir-toggle">
+          <button class="dir-btn active" data-dir="cw">↻&thinsp; cw</button>
+          <button class="dir-btn"        data-dir="ccw">↺&thinsp; ccw</button>
+        </div>
+      </div>
+      <div class="ctrl-row">
+        <span class="ctrl-label">Waves</span>
+        <div class="stepper">
+          <button class="step-btn" id="waves-down" disabled>−</button>
+          <span id="waves-val">1</span>
+          <button class="step-btn" id="waves-up">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="marquee-screen">
+    <div id="marquee-wrapper">
+      <span id="phrase-text"></span>
+    </div>
+  </div>
+
+  <div id="corner-btns">
+    <button class="corner-btn" id="share-btn">&#8916; share</button>
+    <button class="corner-btn" id="reset-btn">&#8635; reset</button>
+  </div>
+
+  <script>
+    /* ── State ── */
+    let clockwise = true;
+    let numWaves  = 1;
+    const MAX_WAVES = 8;
+
+    /* ── Refs ── */
+    const inputEl       = document.getElementById('text-input');
+    const hitBtn        = document.getElementById('hit-btn');
+    const inputScreen   = document.getElementById('input-screen');
+    const marqueeScreen = document.getElementById('marquee-screen');
+    const phraseText    = document.getElementById('phrase-text');
+    const wrapper       = document.getElementById('marquee-wrapper');
+    const cornerBtns    = document.getElementById('corner-btns');
+    const shareBtn      = document.getElementById('share-btn');
+    const resetBtn      = document.getElementById('reset-btn');
+    const wavesVal      = document.getElementById('waves-val');
+    const wavesDown     = document.getElementById('waves-down');
+    const wavesUp       = document.getElementById('waves-up');
+
+    /* ────────────────────────────────────────
+       On page load: read ?phrase=&dir=&waves=
+       and jump straight to the sign if present.
+    ──────────────────────────────────────── */
+    (function readParams() {
+      const p = new URLSearchParams(window.location.search);
+      if (!p.has('phrase')) return;
+
+      const phrase = p.get('phrase').trim();
+      if (!phrase) return;
+
+      if (p.get('dir') === 'ccw') {
+        clockwise = false;
+        document.querySelectorAll('.dir-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.dir === 'ccw'));
+      }
+
+      const w = parseInt(p.get('waves'), 10);
+      if (w >= 1 && w <= MAX_WAVES) { numWaves = w; syncWaveUI(); }
+
+      inputEl.value = phrase;
+      requestAnimationFrame(() => launch(false)); // false = don't re-push state
+    })();
+
+    /* ── Direction toggle ── */
+    document.querySelectorAll('.dir-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.dir-btn').forEach(x => x.classList.remove('active'));
+        btn.classList.add('active');
+        clockwise = (btn.dataset.dir === 'cw');
+      });
+    });
+
+    /* ── Wave stepper ── */
+    function syncWaveUI() {
+      wavesVal.textContent = numWaves;
+      wavesDown.disabled   = numWaves <= 1;
+      wavesUp.disabled     = numWaves >= MAX_WAVES;
+    }
+    wavesDown.addEventListener('click', () => { if (numWaves > 1)         { numWaves--; syncWaveUI(); } });
+    wavesUp  .addEventListener('click', () => { if (numWaves < MAX_WAVES) { numWaves++; syncWaveUI(); } });
+
+    /* ── Launch ── */
+    function launch(updateUrl = true) {
+      const text = inputEl.value.trim();
+      if (!text) return;
+
+      /* Write settings into the URL so the address bar is always
+         the ready-to-share link the moment the sign appears.      */
+      if (updateUrl) {
+        const p = new URLSearchParams({
+          phrase : text,
+          dir    : clockwise ? 'cw' : 'ccw',
+          waves  : numWaves,
+        });
+        history.replaceState(null, '', '?' + p.toString());
+      }
+
+      phraseText.textContent      = text;
+      inputScreen.style.display   = 'none';
+      marqueeScreen.style.display = 'flex';
+      cornerBtns.style.display    = 'flex';
+
+      wrapper.style.animation = 'none';
+      requestAnimationFrame(() => {
+        wrapper.style.animation = '';
+        requestAnimationFrame(generateBulbs);
+      });
+    }
+
+    hitBtn.addEventListener('click', () => launch());
+    inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') launch(); });
+
+    /* ── Share: copy current URL to clipboard ── */
+    shareBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        shareBtn.textContent = '✓ copied!';
+        shareBtn.classList.add('copied');
+        setTimeout(() => {
+          shareBtn.textContent = '⬡ share';
+          shareBtn.classList.remove('copied');
+        }, 2200);
+      });
+    });
+
+    /* ── Reset: clear bulbs and URL params ── */
+    resetBtn.addEventListener('click', () => {
+      wrapper.querySelectorAll('.bulb').forEach(b => b.remove());
+      history.replaceState(null, '', window.location.pathname);
+      marqueeScreen.style.display = 'none';
+      cornerBtns.style.display    = 'none';
+      inputScreen.style.display   = 'flex';
+      inputEl.focus();
+    });
+
+    /* ────────────────────────────────────────
+       Generate bulbs
+       ────────────────────────────────────────
+       Direction  → CW uses idx as-is; CCW reverses it.
+       N waves    → phase = (waveIdx / total * N) % 1
+                    delay = −phase × DURATION
+       Multiplying by N before mod 1 repeats the 0→1 phase
+       cycle N times, placing N evenly-spaced wave peaks.
+    ──────────────────────────────────────── */
+    function generateBulbs() {
+      const SPACING  = 24;
+      const DURATION = 2.0;
+
+      const W = wrapper.offsetWidth;
+      const H = wrapper.offsetHeight;
+
+      const positions = [];
+      function edge(x0, y0, x1, y1) {
+        const len = Math.hypot(x1 - x0, y1 - y0);
+        const n   = Math.max(1, Math.round(len / SPACING));
+        for (let i = 0; i < n; i++) {
+          const t = i / n;
+          positions.push({ x: x0 + (x1 - x0) * t, y: y0 + (y1 - y0) * t });
+        }
+      }
+      edge(0, 0, W, 0);
+      edge(W, 0, W, H);
+      edge(W, H, 0, H);
+      edge(0, H, 0, 0);
+
+      const total = positions.length;
+
+      positions.forEach((pos, idx) => {
+        const waveIdx = clockwise ? idx : (total - 1 - idx);
+        const phase   = (waveIdx / total * numWaves) % 1;
+
+        const bulb = document.createElement('div');
+        bulb.className = 'bulb';
+        bulb.style.left              = pos.x + 'px';
+        bulb.style.top               = pos.y + 'px';
+        bulb.style.animationDelay    = (-phase * DURATION) + 's';
+        bulb.style.animationDuration = DURATION + 's';
+        wrapper.appendChild(bulb);
+      });
+    }
+  </script>
+
+</body>
+</html>
